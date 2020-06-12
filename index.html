@@ -1,0 +1,419 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="animatebg.css">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="nav.css" id="href">
+        <script src="https://kit.fontawesome.com/b0eb476148.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="button.css">
+        <style>
+            @charset "UTF-8";
+blockquote {
+  position: relative;
+  padding-left: 30px;
+  font-weight: 900;
+  color: #2560ff;
+  padding: 1em;
+  margin: 1em;
+  max-width: 33em;
+  font-size: 24px;
+}
+blockquote:before {
+  content: "“";
+  font-family: serif;
+  position: absolute;
+  right: 100%;
+  font-size: 120px;
+  line-height: 0px;
+  top: 50px;
+  color: #78e08f;
+}
+blockquote:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 80px;
+  height: 5px;
+  background: #e56d39;
+  left: 1em;
+}
+
+.body2 {
+  display: -webkit-box;
+  display: flex;
+
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+
+
+
+            main{ font-family: 'PT Serif', serif;}
+            h1, h2 , h3 , h4{font-family: 'Roboto', serif;}
+            #h1main{font-size:5em;letter-spacing: 10px;}
+            .h1sub{font-size:2.5em;letter-spacing: 7px;}
+            
+            .item1 {  grid-area: header; text-align: center; z-index: 1000;  }
+            .item1 > h4{  grid-area: header; ;   }
+            .item2 {  grid-area: para; 
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+            }
+            .item3 { grid-area: image;  justify-content: center; align-items: center;}
+            .item4 {grid-area: imag1; }
+            @media only screen and (min-width: 527px) {.item5 {grid-area: text1;position: relative; top:24px; text-align:left;
+            padding-left:4em;}}
+            .item6 {grid-area: footer; }
+            .item7{grid-area:empty;}
+            .item8{grid-area:message;}
+            .footer {
+            
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color:rgba(95, 151, 177, 0.8);
+            color: white;
+            padding-left: 30px;
+            padding-top: 8px;
+            font-weight: 900;
+            }
+            .pointer {cursor: pointer;
+        color:blue;
+    text-decoration: underline;}
+            
+            .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'para   para   para   image  image  image'
+                'imag1 imag1 empty text1  text1  text1'
+                'footer footer footer footer footer footer'
+                'message message message message message message';
+            grid-gap: 10px;
+            /*font-size:2em;*/
+            padding: 1em;
+            }
+            
+            
+            .img{width:100%;padding-top:2em;
+            /*padding-left:1em;*/
+                background-size: contain
+            }
+            #logoimg{
+                width:100%;
+                margin: auto;
+                position: relative; 
+                top:-100px;
+            }
+            @media only screen and (max-width: 954px) {
+                .item5 {grid-area: text1;position: relative; top:24px; text-align:left;
+            padding-left:2em;}
+                .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header'
+                'para   para image  image'
+                'imag1 imag1 text1  text1'
+                'footer footer footer footer'
+                'message message message message';
+            grid-gap: 10px;
+            /*font-size:2em;*/
+            padding: 1em;
+            }
+            #logoimg{
+                width:150%;
+                position:relative;top:-150px;
+                z-index: 10;
+            }
+            }
+            
+            
+            @media only screen and (max-width: 904px) {
+                #logoimg{
+                width:150%;
+                position:relative;
+                top:-100px;
+                z-index: 10
+            }
+            
+            }
+            
+            @media only screen and (max-width: 720px) {
+                #logoimg{
+                width:150%;position:relative;top:-80px;
+                z-index: 10
+            }
+            }
+
+            
+            @media only screen and (max-width: 594px) {
+            
+                #logoimg{
+                width:160%;position:relative;top:-50px;
+                z-index: 10
+            }
+            
+            }
+            
+            
+            @media only screen and (max-width: 526px) {
+                
+                .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header'
+                'para   para' 
+                'image  image'
+                'text1  text1'
+                'imag1 imag1'  
+                'footer footer'
+                'message message';
+            grid-gap: 10px;
+            /*font-size:2em;*/
+            padding: 1em;
+            }
+                #logoimg{
+                width:100%;
+            }
+            .item3 { grid-area: image;  justify-content: center; align-items: center;position:relative;top:100px;}
+            
+            .item5 {grid-area: text1;position: relative; top:24px; text-align:left;
+            }
+            }
+            
+            .grids{
+        
+                display: grid;
+            grid-template-areas:
+                'nav'
+                'main'  
+                'footer'
+                'message';
+            grid-gap: 10px;
+            /*font-size:2em;*/
+            /* padding: 1em;*/
+            }
+            .main{
+                grid-area: main;
+            }
+            .nav{
+                grid-area: nav;
+            }
+            .footer{
+                grid-area: footer;
+            }
+            
+            #fa-contact {
+        color: rgb(153, 197, 197);
+        text-shadow: 1px 1px 1px #ccc;
+        font-size: 9em;
+    }
+    #fa-works{
+
+        color: rgb(220, 221, 179);
+        text-shadow: 1px 1px 1px #ccc;
+        font-size: 9em;
+    }
+            
+    .wrapper1 {
+    padding: 100px;
+    }
+
+    .image--cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: center right;
+    }
+
+    .imges{widows: 25%;
+    background-size: contain;}
+    .up{z-index:1;}
+    .down{z-index:1; position:relative;top:-50%; margin-bottom:-10%;}
+    .hologram-btn{font-size:20px;}
+            </style>
+    </head>
+
+    <body>
+        <div><div class="grids">
+        <nav class="nav">
+        <a href="#" class="nav-item is-active" active-color="orange">Home</a>
+        <a href="#ourworks" class="nav-item" active-color="green">Our Works</a>
+        <a href="#testi" class="nav-item" active-color="blue">Testimonials</a>
+        <a href="upload.html" class="nav-item" active-color="red">Release Song on Spotify & iTunes</a>
+        <a href="#contact" class="nav-item" active-color="rebeccapurple">Contact</a>
+        <span class="nav-indicator"></span>
+        </nav>
+        
+        <main class="main">
+        <div class="grid-container">
+        <div class="item1" ><h1 id="h1main" class="heading up">KRAEASY</h1>
+                             <h1 id="h1main" class="heading down">KRAEASY</h1>
+        <h2>We help you upload your songs to spotify, iTunes and other Major online stores.</h2></div>
+        <div class="item2">
+        <h2>এবার বাংলার গান ও যাচ্ছে spotify এ </h2>
+        <p><span class="emph">আপনার গান</span> spotify, apple music, deezer ও আন্যান্য আন্তরজাতিক অনলাইন প্ল্যাটফরম এ পউছে দিতে ক্লিক করুন।</p>
+        
+    
+        <br>
+    <a class="hologram-btn" href="upload.html">CLICK TO START <br>UPLOADING YOUR MUSIC</a>
+    <br>
+        </div>
+        <div class="item3">
+        <img src="spotify-logo-anime.gif" alt="Spotify Logo Animation" id="logoimg">
+        </div>
+        <div class="item4">
+        <img class="pad1 img" src="spotifytestimonial.JPG" alt="Spotify Logo Animation" >
+        </div>
+        <div class="item7"></div>
+        <div class="item5"><h2>Get your official Spotify verified artist profile.  </h2>
+        <p>After uploading your first song you can have your own spotify verified profile! We do all the work for you! So, you can focus on what's truly impotant  to you. Making beautiful music.</p></div>
+        <div class="item6" ><br>
+            <br>
+             <br>
+             <br>
+             <br>
+             <br><br>
+             <br>
+             <br>
+             <br>
+             <br>
+            <h1 id="ourworks" class="h1sub">OUR WORKS</h1>
+            <i class="fas fa-praying-hands" id="fa-works"></i>
+
+
+            <p>
+            We have worked with a lot of artsits some of the notable artists are Nazifa Noor, Doyeeta Dasgupta, Shan Shaik, Shahrukh Masnad, Abdullah Al Masud, Shuvro Roy. We regularly work with more than 20 media in the music industry of Bangladesh to distribute musics online. Always assuring artists hassle free distribution of their music.
+            
+             </p>
+
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+            <h1 id="testi" class="h1sub" > PEOPLE WE HAVE WORKED WITH </h1>
+            <div class="wrapper1">
+    
+                <img src="doyeeta.jpg" class="image--cover">
+                
+                <img src="nazifa.jpg" alt="" class="image--cover" />
+                
+                <img src="shan.jpg" alt="" class="image--cover" />
+                
+                <img src="shahrukh.jpg" alt="" class="image--cover" />
+
+                <img src="mohib.jpg" alt="" class="image--cover" />
+
+                <img src="abdullah.jpg" alt="" class="image--cover" />
+
+
+                <img src="miftah.jpg" alt="" class="image--cover" />
+
+
+                <img src="mouraj.jpg" alt="" class="image--cover" />
+                <img src="masud.jpg" alt="" class="image--cover" />
+                <img src="mushfiq.jpg" alt="" class="image--cover" />
+            <blockquote>Best music distributor in Dhaka right now! They have uploaded every single song correctly and helped me out in every step and verified my apple music, spotify, iTunes profile for me. Higly Recommended.
+            -<em style="display:inline-block">Shan Shaik (Musicart)</em>
+            </blockquote>
+             </div><br>
+        <h1 id="contact" class="h1sub"> CONTACT </h1>
+        <i class="fas fa-id-card fa-7x" id="fa-contact"></i>
+        <p>Feel free to contact us 24x7 even after midnight!</p>
+        <p><strong style="display:inline-block;">ADDRESS :</strong> 7/B, G-Block, Bashundhara R/A, Dhaka, Bangladesh  </p>
+        <p><strong style="display:inline-block;">PHONE :</strong> <span id="aa" class="pointer" onclick="showContact()">click to see</span></p>
+        <p><strong  style="display:inline-block;">EMAIL:</strong> <span id="ab" class="pointer" onclick="showEmail()">click to see</span></p>
+
+
+       
+
+
+        
+
+
+
+        </div>
+
+        
+        <div class="item8">
+            <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+            <h1 class="h1sub">A few messages from our team</h1>
+
+            <h2>Stay Home. Stay Safe. If you go out be careful. We will beat COVID-19. Got to keep your hopes high</h2>
+                <img src="corona.jpg" class="imges" alt="stay 6 feet away at least" width="80%">
+            <h2>If you can please do support the Black Live Matter movement in any way you can be it donations or speaking up and stopping people who are in the wrong. Enough is enough.</h2>
+            <img src="blm.jpg" class="imges" alt="black lives matter" width="80%">
+        </div>
+        </div>
+        </main>
+        <footer class="footer animatebg"> <p>Kraeasy ©️ 2017</p><br></footer></div></div>
+
+    <script type="text/babel">
+        const indicator = document.querySelector('.nav-indicator');
+    const items = document.querySelectorAll('.nav-item');
+
+    function handleIndicator(el) {
+    items.forEach(item => {
+        item.classList.remove('is-active');
+        item.removeAttribute('style');
+    });
+    
+    indicator.style.width = `${el.offsetWidth}px`;
+    indicator.style.left = `${el.offsetLeft}px`;
+    indicator.style.backgroundColor = el.getAttribute('active-color');
+
+    el.classList.add('is-active');
+    el.style.color = el.getAttribute('active-color');
+    }
+
+
+    items.forEach((item, index) => {
+    item.addEventListener('click', (e) => { handleIndicator(e.target)});
+    item.classList.contains('is-active') && handleIndicator(item);
+    });
+    </script>
+
+    <script>
+
+        let showContact=()=>{
+                
+                let element = document.getElementById('aa');
+                element.innerHTML='01956258167';  
+                
+                }
+                
+                
+                
+        let showEmail=()=>{
+                let elem = document.getElementById('ab');
+                elem.innerHTML = 'kraeasyrecords@gmail.com';
+                console.log(elem)}
+                
+    </script>     
+
+    </body>
+    </html>

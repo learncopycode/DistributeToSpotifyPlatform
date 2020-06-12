@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+
+    <style>
+
+.item1 {  grid-area: header;   }
+span{
+   color:blue;
+   text-decoration: underline;
+   
+}
+.pointer {cursor: pointer;}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header';
+    
+  grid-gap: 10px;
+  
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 60px 0;
+  font-size: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+        <div class="item1">
+
+            <h1>Thank You! Your Request Has Been Received!</h1>
+            <p>Please complete the payment by bKash to <span id ="aa" class="pointer" onclick="showNumber()">this number</span> with your mobile bKash account. <span id ="ac" onclick="showNumber()">Click</span> to show number.
+            After the payment please let us know your bkash trxID and Your Name by SMS to the above number or email us at <span id="ab" class="pointer" onclick="showEmail()">this email</span>.</p>
+            <button id="bKash_button" onclick="openForm()">Upload Another Song</button>
+        </div>
+    </div>
+<script>
+
+        let openForm=()=>{window.location.href = 'upload.html';}
+
+        let showNumber=()=>{
+            let turnBlack=()=>{
+            let element1 = document.getElementById('ac');
+            element1.style.color="black";
+            element1.style.textDecoration="none";
+        }
+            let element = document.getElementById('aa');
+            
+
+            element.innerHTML = '01912055747';
+            console.log(element)
+        
+
+
+
+        }
+        let showEmail=()=>{
+            let elem = document.getElementById('ab');
+            elem.innerHTML = 'kraeasyrecords@gmail.com';
+            console.log(elem)}
+</script>
+</body>
+</html>
