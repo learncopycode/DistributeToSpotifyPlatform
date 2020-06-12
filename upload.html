@@ -130,6 +130,20 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"step1","qid":"1","text":"STEP 1 Son
             </span>
           </div>
         </li>
+        <li class="form-line jf-required" data-type="control_textbox" id="id_30">
+          <label class="form-label form-label-top form-label-auto" id="label_30" for="input_30">
+            Album Name
+            <span class="form-required">
+              *
+            </span>
+          </label>
+          <div id="cid_30" class="form-input-wide jf-required">
+            <span class="form-sub-label-container " style="vertical-align:top">
+              <input type="text" id="input_30" name="q30_albumName" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_30 sublabel_input_30" required="" />
+              <label class="form-sub-label" for="input_30" id="sublabel_input_30" style="min-height:13px" aria-hidden="false"> If the song is a single then write the name of the single again in this field. </label>
+            </span>
+          </div>
+        </li>
         <li class="form-line" data-type="control_textbox" id="id_22">
           <label class="form-label form-label-top form-label-auto" id="label_22" for="input_22"> Featured Artist Name </label>
           <div id="cid_22" class="form-input-wide">
@@ -297,6 +311,19 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"step1","qid":"1","text":"STEP 1 Son
                 <td class="form-matrix-values">
                   <input type="radio" id="input_13_2_1" class="form-radio validate[required, requireEveryRow]" name="q13_answerThese[2]" value="No" aria-labelledby="label_13_col_1" />
                   <label for="input_13_2_1" class="matrix-choice-label matrix-radio-label">  </label>
+                </td>
+              </tr>
+              <tr class="form-matrix-tr form-matrix-value-tr" role="group" aria-labelledby="label_13 label_13_row_3">
+                <th scope="row" class="form-matrix-headers form-matrix-row-headers">
+                  <label id="label_13_row_3"> Is this song part of an album? </label>
+                </th>
+                <td class="form-matrix-values">
+                  <input type="radio" id="input_13_3_0" class="form-radio validate[required, requireEveryRow]" name="q13_answerThese[3]" value="Yes" aria-labelledby="label_13_col_0" />
+                  <label for="input_13_3_0" class="matrix-choice-label matrix-radio-label">  </label>
+                </td>
+                <td class="form-matrix-values">
+                  <input type="radio" id="input_13_3_1" class="form-radio validate[required, requireEveryRow]" name="q13_answerThese[3]" value="No" aria-labelledby="label_13_col_1" />
+                  <label for="input_13_3_1" class="matrix-choice-label matrix-radio-label">  </label>
                 </td>
               </tr>
             </table>
@@ -508,18 +535,17 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"step1","qid":"1","text":"STEP 1 Son
       </ul>
     </div>
     <script>
-    JotForm.showJotFormPowered = "new_footer";</script>
+    JotForm.showJotFormPowered = "new_footer";
+</script>
     <script>
     JotForm.poweredByText = "Powered by JotForm";</script>
     <input type="hidden" id="simple_spc" name="simple_spc" value="201621778528056" />
     <script type="text/javascript">
-    document.getElementById("si" + "mple" + "_spc").value = "201621778528056-201621778528056";</script>
-    <div class="formFooter-heightMask">
-    </div>
-    <div class="formFooter f6">
-      
-    </div>
-</form>
+    document.getElementById("si" + "mple" + "_spc").value = "201621778528056-201621778528056";
+</script>
+    
+    
+  </form>
 </body>
 </html>
 <script type="text/javascript">JotForm.ownerView=true;</script>
